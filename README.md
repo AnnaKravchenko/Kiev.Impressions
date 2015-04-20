@@ -6,7 +6,7 @@ Project
 Диаграмма классов проекта
 ---------------------------------------------------
 
-![Alt-текст](https://pp.vk.me/c622527/v622527609/2f2b8/JvTvEIcL2_Q.jpg "UML Class diagram")
+![Alt-текст](https://pp.vk.me/c622527/v622527609/2f2c1/Vm0kFBZyZ50.jpg "UML Class diagram")
 
 Authors
 ------------------------------------------------------
