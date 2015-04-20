@@ -8,6 +8,7 @@ Project
 
 ![Alt-текст](https://pp.vk.me/c622527/v622527609/2f2b8/JvTvEIcL2_Q.jpg "UML Class diagram")
 
-Authors: 
+Authors
+=============================================
 * Yana Oliynyk, 
 * Anna Kravchenko.
