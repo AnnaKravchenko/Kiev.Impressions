@@ -10,5 +10,5 @@ Project
 
 Authors
 ------------------------------------------------------
-* Yana Oliynyk, 
+* Yana Oliynyk;
 * Anna Kravchenko.
