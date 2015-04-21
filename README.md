@@ -1,9 +1,12 @@
 # Kiev.Impressions
 Project
 
-**Киев** - это город, который заслуживает любви чуть ли не больше, чем любой другой город Украины. Но (*увы и ах!*) большинство столичных обывателей предпочитают коротать свой досуг в многочисленных кафешках или же просто дома, перед голубым экраном. Очевидно, что при таком раскладе город представляется серым бетонным чудовищем, изобилующим пробками, унылыми лицами и угнетенным настроением. Сей проект организован дабы показать всем и каждому, что Киев - волшебный город, состоящий из прекрасных парков, невероятных уголков и интересных событий. Планируется создание web-сайта, посетитель которого сможет сделать выбор между между возможными видами времяприпровождения, рассмотреть представленные варианты, найти искомое и приятно провести время.
+**Kyiv** is the city, that deserves to be loved perhaps more than any other city in Ukraine. But (*such a pity*) most of the capital citizens prefer to spend their spare time in lots of small caffee or simply at home, watching tv. In this case the city obviously looks for them like an intimidating beton monster with constant corks and moody faces surrounding them.
+This project is organized in order to make everyone understand, that Kyiv is a wonderful city, that consists of beautiful parks, fascinating places and interesting happenings.
+It is planed to create a website that helps its users to choose from the great number of activities, compare the alternatives and find here what is really needed to have a great time in this admirable city.
 
-Диаграмма классов проекта
+
+UML Class diagram
 ---------------------------------------------------
 
 ![Alt-текст](https://pp.vk.me/c622527/v622527609/2f2c1/Vm0kFBZyZ50.jpg "UML Class diagram")
