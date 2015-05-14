@@ -14,4 +14,5 @@ UML Class diagram
 Authors
 ------------------------------------------------------
 * Yana Oliynyk;
-* Anna Kravchenko.
+* Anna Kravchenko;
+* *Iria Novikova.
