@@ -15,4 +15,4 @@ Authors
 ------------------------------------------------------
 * Yana Oliynyk;
 * Anna Kravchenko;
-* Iria Novikova.
+* Irina Novikova.
