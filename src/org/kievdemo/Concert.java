@@ -12,6 +12,11 @@ public class Concert extends Event {
     }
 
     @Override
+    public void getInfo() {
+
+    }
+
+    @Override
     public Occurrence getOccurrence() {
         return occurrence;
     }

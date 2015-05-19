@@ -10,4 +10,11 @@ public class Place {
     private Location location;
     private Collection<String> comments;
 
+    public Place(String name, Location nameStreet) {
+        this.name = name;
+        this.location = location;
+        this.comments = comments;
+    }
+
+
 }

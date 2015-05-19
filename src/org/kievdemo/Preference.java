@@ -6,4 +6,9 @@ package org.kievdemo;
 public class Preference {
     private final Event event = null; //это пока
     private int rate;
+
+    public String sayHello() {
+        return "Hello!";
+    }
+
 }

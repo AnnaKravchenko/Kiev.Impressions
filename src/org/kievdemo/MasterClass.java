@@ -14,6 +14,11 @@ public class MasterClass extends Event implements Repeatable {
     }
 
     @Override
+    public void getInfo() {
+
+    }
+
+    @Override
     public Occurrence getOccurrence() {
         return occurrences.get(0);
     }
