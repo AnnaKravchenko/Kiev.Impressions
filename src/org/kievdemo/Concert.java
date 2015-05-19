@@ -1,14 +1,14 @@
 package org.kievdemo;
 
-/**
- * Created by Ann on 16.04.2015.
- */
-public class Concert extends Event {
+import java.util.GregorianCalendar;
+import java.util.List;
 
-    private Occurrence occurrence;
+public class Concert extends Event implements Repeatable<Concert> {
+    private Host host;
 
-    public Concert() {
-        this.occurrence = new Occurrence();
+    public Concert(String name, Place place, double cost, String description, GregorianCalendar time, String tag, Host host) {
+        super(name, place, cost, description, time, tag);
+        this.host = host;
     }
 
     @Override
@@ -17,7 +17,7 @@ public class Concert extends Event {
     }
 
     @Override
-    public Occurrence getOccurrence() {
-        return occurrence;
+    public List<Concert> getReapeats() {
+        return null;
     }
 }

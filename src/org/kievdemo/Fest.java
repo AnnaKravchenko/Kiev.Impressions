@@ -1,23 +1,22 @@
 package org.kievdemo;
 
-import java.util.Date;
-import java.util.List;
+import java.util.GregorianCalendar;
 
 public class Fest extends Event {
-    private Date fromTo;
+    private GregorianCalendar lastDay;
 
-    public Fest(String name, Place place, double cost, String descrption, Date time, String tag, Date fromTo) {
-        super(name, place, cost, descrption, time, tag);
-        this.fromTo = fromTo;
+    public Fest(String name, Place place, double cost, String description, GregorianCalendar time, String tag, GregorianCalendar lastDay) {
+        super(name, place, cost, description, time, tag);
+
+        if (this.getTime().compareTo(lastDay) < 0) {
+            this.lastDay = lastDay;
+        } else {
+            throw new IllegalArgumentException("Fest ends earlier than it begins!");
+        }
     }
 
     @Override
     public void getInfo() {
 
-    }
-
-    @Override
-    public Occurrence getOccurrence() {
-        return null;
     }
 }

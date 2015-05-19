@@ -1,16 +1,14 @@
 package org.kievdemo;
 
+import java.util.GregorianCalendar;
 import java.util.List;
 
-/**
- * Created by Ann on 16.04.2015.
- */
-public class Lecture extends Event implements Repeatable{
-    private List<Occurrence> occurrences;
+public class Lecture extends Event implements Repeatable<Lecture> {
+    private Host host;
 
-    @Override
-    public List<Occurrence> getOccurrences() {
-        return occurrences;
+    public Lecture(String name, Place place, double cost, String description, GregorianCalendar time, String tag, Host host) {
+        super(name, place, cost, description, time, tag);
+        this.host = host;
     }
 
     @Override
@@ -19,7 +17,7 @@ public class Lecture extends Event implements Repeatable{
     }
 
     @Override
-    public Occurrence getOccurrence() {
-        return occurrences.get(0);
+    public List<Lecture> getReapeats() {
+        return null;
     }
 }
