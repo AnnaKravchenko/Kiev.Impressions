@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="caf7f18f-57b3-4870-a8d5-e50f4d1f6c93" name="Default" comment="Laba2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/kievdemo/Host.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/kievdemo/MyException.java" />
-      <change type="DELETED" beforePath="C:\Users\Ann\IdeaProjects\KievDemo\src\Tests\org\kievdemo\PreferenceTest.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ann\IdeaProjects\KievDemo\src\org\kievdemo\KievDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ann\IdeaProjects\KievDemo\src\org\kievdemo\MyExeption.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ann\IdeaProjects\KievDemo\src\org\kievdemo\Occurrence.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/Address.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/Address.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/Concert.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/Concert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/Event.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/Fest.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/Fest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/Lecture.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/Lecture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/Location.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/Location.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/MasterClass.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/MasterClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/OutDoor.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/OutDoor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/Place.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/Place.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/Preference.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/Preference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/Repeatable.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/Repeatable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/kievdemo/User.java" afterPath="$PROJECT_DIR$/src/org/kievdemo/User.java" />
+    <list default="true" id="caf7f18f-57b3-4870-a8d5-e50f4d1f6c93" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="93a230ac-d4d8-440d-88ea-b75d4f84caf9" name="Rejected commit: Default" comment="" />
@@ -790,12 +772,19 @@
       <workItem from="1431790898361" duration="2602000" />
       <workItem from="1431811223718" duration="745000" />
       <workItem from="1431893380076" duration="16635000" />
-      <workItem from="1432052993219" duration="2501000" />
+      <workItem from="1432052993219" duration="2557000" />
     </task>
+    <task id="LOCAL-00001" summary="Laba2">
+      <created>1432067406219</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1432067406219</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54423000" />
+    <option name="totallyTimeSpent" value="54479000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
