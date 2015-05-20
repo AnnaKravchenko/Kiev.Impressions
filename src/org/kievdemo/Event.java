@@ -11,7 +11,7 @@ public abstract class Event {
     private GregorianCalendar time;
     private String tag;
 
-    public Event(String name, Place place, double cost, String description, GregorianCalendar time, String tag) {
+    public Event(String name, Place place, double cost, String description, GregorianCalendar time, String tag) {// еще раз
         this.name = name;
         this.place = place;
         this.cost = cost;

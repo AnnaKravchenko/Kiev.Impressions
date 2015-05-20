@@ -35,3 +35,4 @@ public class Place {
         this.comments = comments;
     }
 }
+//Should I think about priority?

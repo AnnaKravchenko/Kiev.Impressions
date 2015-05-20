@@ -10,7 +10,7 @@ public class Address {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o) { //what?
         if (this == o) return true;
         if (!(o instanceof Address)) return false;
 

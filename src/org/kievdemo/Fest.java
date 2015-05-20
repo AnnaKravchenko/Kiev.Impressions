@@ -11,7 +11,7 @@ public class Fest extends Event {
         if (this.getTime().compareTo(lastDay) < 0) {
             this.lastDay = lastDay;
         } else {
-            throw new IllegalArgumentException("Fest ends earlier than it begins!");
+            throw new IllegalArgumentException("This Fest ends earlier than it begins!");
         }
     }
 

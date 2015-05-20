@@ -15,7 +15,7 @@ public class User {
         ArrayList<Preference> matches = new ArrayList<>();
 
         for (Preference p : preferences) {
-            if (p.getEvent().getTime().equals(date)) {
+            if (p.getEvent().getTime().equals(date)) { //Another date?
                 matches.add(p);
             }
         }
@@ -23,7 +23,7 @@ public class User {
         if (!matches.isEmpty()) {
             return matches;
         } else {
-            throw new MyException("No events planned for that day!");
+            throw new MyException("Sorry! No events planned for that day!");
         }
     }
 }

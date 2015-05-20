@@ -13,9 +13,7 @@ public class Preference {
         return event;
     }
 
-    public String sayHello() {
-        return "Hello!";
-    }
+    //public String sayHello() {     return "Hello!";  } //For my (a little bit not mine) first Unit Test?
 
     @Override
     public boolean equals(Object o) {
