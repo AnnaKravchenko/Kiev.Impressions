@@ -11,19 +11,19 @@ public class User {
         this.preferences = preferences;
     }
 
-    public Collection<Preference> getPreferencesByDate(GregorianCalendar date) throws MyException {
-        ArrayList<Preference> matches = new ArrayList<>();
+    public Collection<Preference> getPreferencesByDate(GregorianCalendar date) throws NoEventForThisDayFoundExeption {
+        ArrayList<Preference> filterForPrefernce = new ArrayList<>(); //name of list
 
-        for (Preference p : preferences) {
-            if (p.getEvent().getTime().equals(date)) { //Another date?
-                matches.add(p);
+        for (Preference preference : preferences) {
+            if (preference.getEvent().getTime().equals(date)) { //Another date?
+                filterForPrefernce.add(preference);
             }
         }
 
-        if (!matches.isEmpty()) {
-            return matches;
+        if (!filterForPrefernce.isEmpty()) {
+            return filterForPrefernce;
         } else {
-            throw new MyException("Sorry! No events planned for that day!");
+            throw new NoEventForThisDayFoundExeption("Sorry! No events planned for that day!");
         }
     }
 }

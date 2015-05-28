@@ -8,7 +8,7 @@ public class Fest extends Event {
     public Fest(String name, Place place, double cost, String description, GregorianCalendar time, String tag, GregorianCalendar lastDay) {
         super(name, place, cost, description, time, tag);
 
-        if (this.getTime().compareTo(lastDay) < 0) {
+        if (this.getTime().compareTo(lastDay) < 0) { //when I<II
             this.lastDay = lastDay;
         } else {
             throw new IllegalArgumentException("This Fest ends earlier than it begins!");

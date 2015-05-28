@@ -53,16 +53,16 @@ public class UserTest {
         user = new User(preferences);
     }
 
-    @Test //Does it works at all?
-    public void testGetPreferencesByDate() throws MyException {
+    @Test
+    public void testGetPreferencesByDate() throws NoEventForThisDayFoundExeption {
         assertTrue(user.getPreferencesByDate(new GregorianCalendar(2015, 7, 24)).contains(preferences.get(1)));
         assertTrue(user.getPreferencesByDate(new GregorianCalendar(2015, 7, 24)).contains(preferences.get(2)));
 
         assertFalse(user.getPreferencesByDate(new GregorianCalendar(2015, 7, 24)).contains(preferences.get(0)));
     }
 
-    @Test(expected = MyException.class) //Does it throws exception?
-    public void testGetPreferencesByDateException() throws MyException {
+    @Test(expected = NoEventForThisDayFoundExeption.class)
+    public void testGetPreferencesByDateException() throws NoEventForThisDayFoundExeption {
         user.getPreferencesByDate(new GregorianCalendar(1996, 9, 12));
     }
 
