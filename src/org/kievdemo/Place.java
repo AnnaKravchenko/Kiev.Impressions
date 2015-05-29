@@ -1,9 +1,19 @@
 package org.kievdemo;
 
 import java.util.Collection;
+import java.util.LinkedList;
 
 public class Place {
     private String name;
+    private Location location;
+    private Collection<String> comments;
+
+    //todo remove in lab 4
+
+    public Place() {
+        location = new Location();
+        comments = new LinkedList<>();
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -26,13 +36,9 @@ public class Place {
         return result;
     }
 
-    private Location location;
-    private Collection<String> comments;
-
     public Place(String name, Location location, Collection<String> comments) {
         this.name = name;
         this.location = location;
         this.comments = comments;
     }
 }
-//Should I think about priority?

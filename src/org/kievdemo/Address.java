@@ -4,6 +4,10 @@ public class Address {
     private String street;
     private short buildingNumber;
 
+    //todo remove in lab 4
+    public Address() {
+    }
+
     public Address(String street, short buildingNumber) {
         this.street = street;
         this.buildingNumber = buildingNumber;

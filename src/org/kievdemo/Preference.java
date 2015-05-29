@@ -13,7 +13,13 @@ public class Preference {
         return event;
     }
 
-    //public String sayHello() {     return "Hello!";  } //For my (a little bit not mine) first Unit Test?
+    @Override
+    public String toString() {
+        return "Preference{" +
+                "event=" + event +
+                ", rate=" + rate +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -22,15 +28,12 @@ public class Preference {
 
         Preference that = (Preference) o;
 
-        if (rate != that.rate) return false;
         return !(event != null ? !event.equals(that.event) : that.event != null);
 
     }
 
     @Override
     public int hashCode() {
-        int result = event != null ? event.hashCode() : 0;
-        result = 31 * result + rate;
-        return result;
+        return event != null ? event.hashCode() : 0;
     }
 }

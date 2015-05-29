@@ -3,6 +3,13 @@ package org.kievdemo;
 public class Location {
     private double latitute;
     private double longtitule;
+    private Address address;
+
+    //todo remove in lab 4
+
+    public Location() {
+        address = new Address();
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -29,11 +36,11 @@ public class Location {
         return result;
     }
 
-    private Address address;
-
     public Location(double latitute, double longtitule, Address address) {
         this.latitute = latitute;
         this.longtitule = longtitule;
         this.address = address;
     }
 }
+
+//todo who placed field between methods!?

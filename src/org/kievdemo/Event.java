@@ -11,6 +11,23 @@ public abstract class Event {
     private GregorianCalendar time;
     private String tag;
 
+    //todo remove in lab 4
+    public Event() {
+        place = new Place();
+        //Magic - the date when it worked!
+        time = new GregorianCalendar(2015, 4, 29);
+    }
+
+    //todo remove in lab 4
+
+    public Event(String name, double cost, String description, String tag) {
+        this();
+        this.name = name;
+        this.cost = cost;
+        this.description = description;
+        this.tag = tag;
+    }
+
     public Event(String name, Place place, double cost, String description, GregorianCalendar time, String tag) {// еще раз
         this.name = name;
         this.place = place;
@@ -20,15 +37,25 @@ public abstract class Event {
         this.tag = tag;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public GregorianCalendar getTime() {
         return time;
     }
 
-    public String getTag() {
-        return tag;
+    @Override
+    public String toString() {
+        return "Event{" +
+                "name='" + name + '\'' +
+//                ", place=" + place +
+                ", cost=" + cost +
+                ", description='" + description + '\'' +
+//                ", time=" + time +
+                ", tag='" + tag + '\'' +
+                '}';
     }
-
-    public abstract void getInfo();
 
     @Override
     public boolean equals(Object o) {
@@ -37,26 +64,17 @@ public abstract class Event {
 
         Event event = (Event) o;
 
-        if (Double.compare(event.cost, cost) != 0) return false;
         if (name != null ? !name.equals(event.name) : event.name != null) return false;
         if (place != null ? !place.equals(event.place) : event.place != null) return false;
-        if (description != null ? !description.equals(event.description) : event.description != null) return false;
-        if (time != null ? !time.equals(event.time) : event.time != null) return false;
-        return !(tag != null ? !tag.equals(event.tag) : event.tag != null);
+        return !(time != null ? !time.equals(event.time) : event.time != null);
 
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        result = name != null ? name.hashCode() : 0;
+        int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (place != null ? place.hashCode() : 0);
-        temp = Double.doubleToLongBits(cost);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (description != null ? description.hashCode() : 0);
         result = 31 * result + (time != null ? time.hashCode() : 0);
-        result = 31 * result + (tag != null ? tag.hashCode() : 0);
         return result;
     }
 }
