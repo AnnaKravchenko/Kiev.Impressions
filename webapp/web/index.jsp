@@ -17,5 +17,7 @@
 
     <input type="submit" value="Sign in"/>
 </form>
+
+<a href="registration.jsp">Register new user</a>
 </body>
 </html>

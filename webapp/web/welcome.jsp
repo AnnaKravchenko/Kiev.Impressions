@@ -5,7 +5,7 @@
 </head>
 <body>
 
-Welcome, ${login} !
+<h3>Welcome, ${login} !</h3>
 <form action="magic" method="post">
     <input type="hidden" name="command" value="signout"/>
     <input type="submit" value="Sign out"/>

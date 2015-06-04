@@ -1,12 +1,18 @@
 package org.kievdemo;
 
-public class Preference {
+import java.io.Serializable;
+
+public class Preference implements Serializable {
     private final Event event;
     private int rate;
 
     public Preference(Event event, int rate) {
         this.event = event;
         this.rate = rate;
+    }
+
+    public int getRate() {
+        return rate;
     }
 
     public Event getEvent() {

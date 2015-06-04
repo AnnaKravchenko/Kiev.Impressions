@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - kiev_demo_db@localhost" uuid="d99297f7-86fd-4e74-84eb-05a41452cfc7">
+    <database-info product="MySQL" version="5.6.25-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="kiev_demo_db"/>
+    <table name="prefers" schema="" catalog="kiev_demo_db" type="TABLE">
+      <column name="event_name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="place_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="loc_lat" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="loc_long" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="addr_street" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="addr_num" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="event_cost" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="event_discr" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="event_time" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="event_tag" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="pref_rate" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="pref_type" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="event_name"/>
+    </table>
+    <table name="users" schema="" catalog="kiev_demo_db" type="TABLE">
+      <column name="login" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="event_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <index name="pref_id_idx" unique="false" columns="event_name"/>
+    </table>
+  </data-source>
+</component>

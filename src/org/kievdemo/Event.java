@@ -14,12 +14,10 @@ public abstract class Event {
     //todo remove in lab 4
     public Event() {
         place = new Place();
-        //Magic - the date when it worked!
-        time = new GregorianCalendar(2015, 4, 29);
+        time = new GregorianCalendar(3000, 11, 1);
     }
 
     //todo remove in lab 4
-
     public Event(String name, double cost, String description, String tag) {
         this();
         this.name = name;
@@ -35,6 +33,18 @@ public abstract class Event {
         this.description = description;
         this.time = time;
         this.tag = tag;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getTag() {
+        return tag;
     }
 
     public String getName() {

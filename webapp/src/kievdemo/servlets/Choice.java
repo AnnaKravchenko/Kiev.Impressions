@@ -7,26 +7,33 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.*;
 import java.util.Map;
 
 public class Choice extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        process(request, response);
+        try {
+            process(request, response);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        process(request, response);
+        try {
+            process(request, response);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ClassNotFoundException {
         Map<String, String[]> checkedEvents = request.getParameterMap();
 
         final int RATE = 5;
 
-        //this will actually connect to database and operate with it
-        //now just a temp solution using sessions
         int count = checkedEvents.get("isChecked") == null ? 0 : checkedEvents.get("isChecked").length;
 
         for (int i = 0; i < count; i++) {
@@ -57,9 +64,8 @@ public class Choice extends HttpServlet {
                     break;
                 }
 
-                //Dummy constructor. Will be replaced.
                 default: {
-                    event = new Fest(name, cost, description, tag);
+                    throw new IllegalStateException();
                 }
             }
 
@@ -69,13 +75,29 @@ public class Choice extends HttpServlet {
 
             if (!user.getPreferences().contains(preference)) {
                 user.getPreferences().add(preference);
+                putPreferenceInDB(preference, user);
             }
-
-            System.out.println(user.getPreferences());
 
             request.getSession().setAttribute("user", user);
             request.getSession().setAttribute("preferences", user.getPreferences());
         }
         getServletContext().getRequestDispatcher("/prefers.jsp").forward(request, response);
+    }
+
+    private void putPreferenceInDB(Preference preference, User user) throws ClassNotFoundException {
+        Class.forName("com.mysql.jdbc.Driver");
+
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/kiev_demo_db", "root", "1234")) {
+            if (connection != null) {
+                Statement statement = connection.createStatement();
+
+                statement.executeUpdate("INSERT INTO kiev_demo_db.users (login, password, event_name) VALUES ('"
+                        + user.getLogin() + "', '" + user.getPassword() + "', '" + preference.getEvent().getName() + "');");
+
+                statement.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

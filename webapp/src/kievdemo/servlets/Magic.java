@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class Magic extends HttpServlet {
@@ -25,24 +26,33 @@ public class Magic extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        process(request, response);
+        try {
+            process(request, response);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        process(request, response);
+        try {
+            process(request, response);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ClassNotFoundException {
         String command = request.getParameter("command");
 
         if (command.equals("signin")) {
             String login = request.getParameter("login");
             String password = request.getParameter("password");
 
-            User user = new User(login, password);
 
-            if (users.contains(user)) {
+            if (auth(login, password)) {
+                User user = new User(login, password);
+
                 request.getSession().setAttribute("login", login);
 
                 request.getSession().setAttribute("user", user);
@@ -57,5 +67,24 @@ public class Magic extends HttpServlet {
         } else {
             getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
         }
+    }
+
+    private boolean auth(String login, String password) throws ClassNotFoundException {
+        Class.forName("com.mysql.jdbc.Driver");
+
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/kiev_demo_db", "root", "1234")) {
+            if (connection != null) {
+                Statement statement = connection.createStatement();
+
+                try (ResultSet resultSet = statement.executeQuery("SELECT * FROM kiev_demo_db.users WHERE login='" + login + "';")) {
+                    return resultSet.next() && resultSet.getString("password").equals(password);
+                }
+            } else {
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }
